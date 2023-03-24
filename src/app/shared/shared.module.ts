@@ -51,6 +51,7 @@ import { LoadingComponent } from './loading/loading.component';
 import { PaginationComponent } from './pagination/pagination.component';
 import { ThumbnailComponent } from '../thumbnail/thumbnail.component';
 import { SearchFormComponent } from './search-form/search-form.component';
+import { ThemedSearchFormComponent } from './search-form/themed-search-form.component';
 import {
   SearchResultGridElementComponent
 } from './object-grid/search-result-grid-element/search-result-grid-element.component';
@@ -217,6 +218,9 @@ import {
   CommunitySidebarSearchListElementComponent
 } from './object-list/sidebar-search-list-element/community/community-sidebar-search-list-element.component';
 import {
+  BundleListElementComponent
+} from './object-list/bundle-list-element/bundle-list-element.component';
+import {
   AuthorizedCollectionSelectorComponent
 } from './dso-selector/dso-selector/authorized-collection-selector/authorized-collection-selector.component';
 import { HoverClassDirective } from './hover-class.directive';
@@ -264,6 +268,9 @@ import {
 import { EpersonGroupListComponent } from './eperson-group-list/eperson-group-list.component';
 import { EpersonSearchBoxComponent } from './eperson-group-list/eperson-search-box/eperson-search-box.component';
 import { GroupSearchBoxComponent } from './eperson-group-list/group-search-box/group-search-box.component';
+import {
+  ThemedItemPageTitleFieldComponent
+} from '../item-page/simple/field-components/specific-field/title/themed-item-page-field.component';
 
 const MODULES = [
   CommonModule,
@@ -327,6 +334,7 @@ const COMPONENTS = [
   PaginationComponent,
   RSSComponent,
   SearchFormComponent,
+  ThemedSearchFormComponent,
   PageWithSidebarComponent,
   SidebarDropdownComponent,
   ThumbnailComponent,
@@ -368,11 +376,13 @@ const COMPONENTS = [
   ContextHelpWrapperComponent,
   EpersonGroupListComponent,
   EpersonSearchBoxComponent,
-  GroupSearchBoxComponent
+  GroupSearchBoxComponent,
+  ThemedItemPageTitleFieldComponent,
 ];
 
 const ENTRY_COMPONENTS = [
   // put only entry components that use custom decorator
+  BundleListElementComponent,
   CollectionListElementComponent,
   CommunityListElementComponent,
   SearchResultListElementComponent,
