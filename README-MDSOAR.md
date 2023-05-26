@@ -8,7 +8,7 @@ The original dspace-angular documentation is in the "README.md" file.
 
 ## Prerequisite
 
-- Node v12.x, v14.x or v16.x
+- Node v16.18.0 or later
 - npm >= v5.x
 - yarn == v1.x
 - Ensure that the MD-SOAR API is up and running by following the instructions at
