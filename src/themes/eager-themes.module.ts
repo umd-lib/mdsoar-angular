@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { EagerThemeModule as DSpaceEagerThemeModule } from './dspace/eager-theme.module';
 // import { EagerThemeModule as CustomEagerThemeModule } from './custom/eager-theme.module';
+// UMD Customization
+import { EagerThemeModule as MdsoarEagerThemeModule } from './mdsoar/eager-theme.module';
+// End UMD Customization
 
 /**
  * This module bundles the eager theme modules for all available themes.
@@ -13,6 +16,10 @@ import { EagerThemeModule as DSpaceEagerThemeModule } from './dspace/eager-theme
   imports: [
     DSpaceEagerThemeModule,
     // CustomEagerThemeModule,
+
+    // UMD Customization
+    MdsoarEagerThemeModule,
+    // End UMD Customization
   ],
 })
 export class EagerThemesModule {

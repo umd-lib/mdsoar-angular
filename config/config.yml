@@ -3,3 +3,10 @@ rest:
   host: api7.dspace.org
   port: 443
   nameSpace: /server
+
+# UMD Customization
+themes:
+  - name: 'mdsoar'
+    extends: 'dspace'
+  - name: 'dspace'
+# End UMD Customization
