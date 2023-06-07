@@ -63,7 +63,6 @@ requests.
       host: localhost
       port: 8080
       nameSpace: /server
-    EOF
 
     # UMD Environment Banner settings
     environmentBanner:
@@ -71,6 +70,7 @@ requests.
       foregroundColor: "#fff"
       backgroundColor: "#008000"
       enabled: true
+    EOF
     ```
 
 3) Install the dependencies
