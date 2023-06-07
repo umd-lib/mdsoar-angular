@@ -3,3 +3,30 @@ rest:
   host: api7.dspace.org
   port: 443
   nameSpace: /server
+
+# UMD Customization
+themes:
+  - name: 'mdsoar'
+    extends: 'dspace'
+    headTags:
+      - tagName: link
+        attributes:
+          rel: icon
+          href: assets/mdsoar/images/favicons/favicon.ico
+          sizes: any
+      # - tagName: link
+      #   attributes:
+      #     rel: icon
+      #     href: assets/dspace/images/favicons/favicon.svg
+      #     type: image/svg+xml
+      # - tagName: link
+      #   attributes:
+      #     rel: apple-touch-icon
+      #     href: assets/dspace/images/favicons/apple-touch-icon.png
+      # - tagName: link
+      #   attributes:
+      #     rel: manifest
+      #     href: assets/dspace/images/favicons/manifest.webmanifest
+
+  - name: 'dspace'
+# End UMD Customization

@@ -6,9 +6,11 @@ describe('Homepage', () => {
     cy.visit('/');
   });
 
-  it('should display translated title "DSpace Angular :: Home"', () => {
-    cy.title().should('eq', 'DSpace Angular :: Home');
+  // UMD Customization
+  it('should display translated title "Maryland Shared Open Access Repository Home"', () => {
+    cy.title().should('eq', 'Maryland Shared Open Access Repository Home');
   });
+  // End UMD Customization
 
   it('should contain a news section', () => {
     cy.get('ds-home-news').should('be.visible');

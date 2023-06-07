@@ -5293,4 +5293,12 @@
   "admin.system-wide-alert.breadcrumbs": "System-wide Alerts",
 
   "admin.system-wide-alert.title": "System-wide Alerts",
+
+  // UMD Customization
+  "home.title": "Maryland Shared Open Access Repository Home",
+
+  "menu.header.image.logo": "MD-SOAR",
+
+  "repository.title.prefix": "",
+  // End UMD Customization
 }
