@@ -21,9 +21,9 @@ the "mdsoar-frostburg" theme.
 1) Copy one of the existing community theme directories, such as
   "mdsoar-frostburg".
 
-  ```bash
-  $ cp -R src/themes/mdsoar-frostburg/ src/themes/mdsoar-example/
-  ```
+    ```bash
+    $ cp -R src/themes/mdsoar-frostburg/ src/themes/mdsoar-example/
+    ```
 
 2) Replace the `src/themes/mdsoar-example/assets/image/community_logo.png`
    file with the logo image for the institution.
@@ -38,26 +38,26 @@ the "mdsoar-frostburg" theme.
 5) Add the new theme to "projects/dspace-angular/architect/build/options/styles"
    section of the `angular.json` file:
 
-   ```text
-   {
-   ...
-   "projects": {
-     "dspace-angular": {
-     ...
-       "architect": {
-         "build": {
-          ...
-          "options": {
-          ...
-          "styles": [
-            ...
-            {
-              "input": "src/themes/mdsoar/styles/theme.scss",
-              "inject": false,
-              "bundleName": "mdsoar-example-theme"
-            },
-            ...
-   ```
+    ```text
+    {
+    ...
+    "projects": {
+      "dspace-angular": {
+      ...
+        "architect": {
+          "build": {
+           ...
+           "options": {
+           ...
+           "styles": [
+             ...
+             {
+               "input": "src/themes/mdsoar/styles/theme.scss",
+               "inject": false,
+               "bundleName": "mdsoar-example-theme"
+             },
+             ...
+    ```
 
 6) Add the theme and the community handle to the "themes" section of the
    `config/config.yml`, where \"<COMMUNITY_THEME_HANDLE>" is the community
