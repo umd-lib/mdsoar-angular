@@ -114,8 +114,11 @@ In keeping with [SSDR policy](https://confluence.umd.edu/display/LIB/Create+Envi
 an "environment banner" will be displayed at the top of each page when running
 on non-production servers.
 
-There are two ways to configure the environment banner:
-### YAML format
+The environment banner can be configured either via a config/config.*.yml" YAML
+file or by environment variables. In both are present, the environment variables
+take precedence.
+
+#### YAML file
 
 The following is an example of configuring in a "config/config.*.yml" YAML file,
 such as "config/config.dev.yml":
@@ -128,6 +131,8 @@ environmentBanner:
   backgroundColor: "#008000"
   enabled: true
 ```
+
+#### Environment variables
 
 In DSpace, the configuration from the YAML files can be overridden using either
 environment variables, or a ".env" file (see the "Configuration Override"
@@ -152,6 +157,11 @@ DSPACE_ENVIRONMENTBANNER_FOREGROUNDCOLOR=#000
 DSPACE_ENVIRONMENTBANNER_BACKGROUNDCOLOR=#fff100
 DSPACE_ENVIRONMENTBANNER_ENABLED=true
 ```
+
+### Community Themes
+
+The DSpace communities associated with individual institutions may have a
+custom DSpace theme. See <docs/CommunityThemes.md> for more information.
 
 ### I18n Customizations
 
