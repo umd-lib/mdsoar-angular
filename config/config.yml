@@ -18,6 +18,10 @@ themes:
     extends: 'mdsoar'
     handle: '11603/2'
 
+  - name: 'mdsoar-hood'
+    extends: 'mdsoar'
+    handle: '11603/4380'
+
   # MD-SOAR Global Theme
   - name: 'mdsoar'
     extends: 'dspace'

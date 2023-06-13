@@ -74,6 +74,11 @@
                 "input": "src/themes/mdsoar/styles/theme.scss",
                 "inject": false,
                 "bundleName": "mdsoar-goucher-theme"
+              },
+              {
+                "input": "src/themes/mdsoar/styles/theme.scss",
+                "inject": false,
+                "bundleName": "mdsoar-hood-theme"
               }
             ],
             "scripts": [],
