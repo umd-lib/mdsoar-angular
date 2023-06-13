@@ -30,6 +30,10 @@ themes:
     extends: 'mdsoar'
     handle: '11603/8'
 
+  - name: 'mdsoar-salisbury'
+    extends: 'mdsoar'
+    handle: '11603/9'
+
   # MD-SOAR Global Theme
   - name: 'mdsoar'
     extends: 'dspace'
