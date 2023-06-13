@@ -79,6 +79,11 @@
                 "input": "src/themes/mdsoar/styles/theme.scss",
                 "inject": false,
                 "bundleName": "mdsoar-hood-theme"
+              },
+              {
+                "input": "src/themes/mdsoar/styles/theme.scss",
+                "inject": false,
+                "bundleName": "mdsoar-loyola-notre-dame-theme"
               }
             ],
             "scripts": [],

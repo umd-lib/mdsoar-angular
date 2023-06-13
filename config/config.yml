@@ -22,6 +22,10 @@ themes:
     extends: 'mdsoar'
     handle: '11603/4380'
 
+  - name: 'mdsoar-loyola-notre-dame'
+    extends: 'mdsoar'
+    handle: '11603/6'
+
   # MD-SOAR Global Theme
   - name: 'mdsoar'
     extends: 'dspace'
