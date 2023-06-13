@@ -54,6 +54,10 @@ themes:
     extends: 'mdsoar'
     handle: '11603/14'
 
+  - name: 'mdsoar-umes'
+    extends: 'mdsoar'
+    handle: '11603/27642'
+
   # MD-SOAR Global Theme
   - name: 'mdsoar'
     extends: 'dspace'
