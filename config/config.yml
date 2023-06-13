@@ -6,7 +6,19 @@ rest:
 
 # UMD Customization
 themes:
-  - name: 'dspace'
+  # Note: When placing themes into this list, any theme that "extends" from
+  # another theme MUST appear before that theme in the list.
+
+  # Community Themes
+  - name: 'mdsoar-frostburg'
+    extends: 'mdsoar'
+    handle: '11603/1'
+
+  - name: 'mdsoar-goucher'
+    extends: 'mdsoar'
+    handle: '11603/2'
+
+  # MD-SOAR Global Theme
   - name: 'mdsoar'
     extends: 'dspace'
     headTags:
@@ -15,10 +27,7 @@ themes:
           rel: icon
           href: assets/mdsoar/images/favicons/favicon.ico
           sizes: any
-  - name: 'mdsoar-frostburg'
-    extends: 'mdsoar'
-    handle: '11603/1'
-  - name: 'mdsoar-goucher'
-    extends: 'mdsoar'
-    handle: '11603/2'
+
+  # DSpace Stock theme
+  - name: 'dspace'
 # End UMD Customization
