@@ -42,6 +42,10 @@ themes:
     extends: 'mdsoar'
     handle: '11603/10'
 
+  - name: 'mdsoar-towson'
+    extends: 'mdsoar'
+    handle: '11603/11'
+
   # MD-SOAR Global Theme
   - name: 'mdsoar'
     extends: 'dspace'
