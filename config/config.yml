@@ -34,6 +34,10 @@ themes:
     extends: 'mdsoar'
     handle: '11603/9'
 
+  - name: 'mdsoar-st-marys'
+    extends: 'mdsoar'
+    handle: '11603/10'
+
   # MD-SOAR Global Theme
   - name: 'mdsoar'
     extends: 'dspace'
