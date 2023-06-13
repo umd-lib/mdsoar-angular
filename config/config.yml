@@ -34,6 +34,10 @@ themes:
     extends: 'mdsoar'
     handle: '11603/9'
 
+  - name: 'mdsoar-stevenson'
+    extends: 'mdsoar'
+    handle: '11603/4395'
+
   - name: 'mdsoar-st-marys'
     extends: 'mdsoar'
     handle: '11603/10'

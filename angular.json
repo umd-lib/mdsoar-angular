@@ -98,6 +98,11 @@
               {
                 "input": "src/themes/mdsoar/styles/theme.scss",
                 "inject": false,
+                "bundleName": "mdsoar-stevenson-theme"
+              },
+              {
+                "input": "src/themes/mdsoar/styles/theme.scss",
+                "inject": false,
                 "bundleName": "mdsoar-st-marys-theme"
               }
             ],
