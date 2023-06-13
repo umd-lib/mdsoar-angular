@@ -26,6 +26,10 @@ themes:
     extends: 'mdsoar'
     handle: '11603/6'
 
+  - name: 'mdsoar-morgan'
+    extends: 'mdsoar'
+    handle: '11603/8'
+
   # MD-SOAR Global Theme
   - name: 'mdsoar'
     extends: 'dspace'
