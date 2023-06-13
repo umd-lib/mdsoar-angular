@@ -114,6 +114,11 @@
                 "input": "src/themes/mdsoar/styles/theme.scss",
                 "inject": false,
                 "bundleName": "mdsoar-ubalt-theme"
+              },
+              {
+                "input": "src/themes/mdsoar/styles/theme.scss",
+                "inject": false,
+                "bundleName": "mdsoar-umbc-theme"
               }
             ],
             "scripts": [],

@@ -50,6 +50,10 @@ themes:
     extends: 'mdsoar'
     handle: '11603/12'
 
+  - name: 'mdsoar-umbc'
+    extends: 'mdsoar'
+    handle: '11603/14'
+
   # MD-SOAR Global Theme
   - name: 'mdsoar'
     extends: 'dspace'
