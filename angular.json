@@ -109,6 +109,11 @@
                 "input": "src/themes/mdsoar/styles/theme.scss",
                 "inject": false,
                 "bundleName": "mdsoar-towson-theme"
+              },
+              {
+                "input": "src/themes/mdsoar/styles/theme.scss",
+                "inject": false,
+                "bundleName": "mdsoar-ubalt-theme"
               }
             ],
             "scripts": [],
