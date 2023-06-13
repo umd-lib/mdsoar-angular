@@ -70,6 +70,10 @@
                 "inject": false,
                 "bundleName": "mdsoar-frostburg-theme"
               },
+              {
+                "input": "src/themes/mdsoar/styles/theme.scss",
+                "inject": false,
+                "bundleName": "mdsoar-goucher-theme"
               }
             ],
             "scripts": [],

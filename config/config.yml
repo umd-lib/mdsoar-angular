@@ -18,4 +18,7 @@ themes:
   - name: 'mdsoar-frostburg'
     extends: 'mdsoar'
     handle: '11603/1'
+  - name: 'mdsoar-goucher'
+    extends: 'mdsoar'
+    handle: '11603/2'
 # End UMD Customization
