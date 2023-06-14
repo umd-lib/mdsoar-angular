@@ -2,13 +2,13 @@
 
 ## Introduction
 
-MD-SOAR provides customized themes for the communities associated with each
-member institution.
+MD-SOAR provides customized themes for the DSpace communities associated with
+each member institution.
 
 ## Adding a theme
 
 Community themes should typically be named "mdsoar-\<institution>" where
-\<insitution> is the name of the institution.
+\<institution> is the (possibly abbreviated) name of the institution.
 
 ### umd-lib/mdsoar-angular Changes
 
@@ -33,7 +33,7 @@ the "mdsoar-frostburg" theme.
    use `assets/mdsoar-example/images/community_logo.png`.
 
 4) Update the `src/themes/mdsoar-example/app/breadcrumbs/breadcrumbs.component.ts`
-   file, changing "mdsoar-frostburg" to "mdsoar-example":
+   file, changing "mdsoar-frostburg" to "mdsoar-example".
 
 5) Add the new theme to "projects/dspace-angular/architect/build/options/styles"
    section of the `angular.json` file:
@@ -73,11 +73,11 @@ the "mdsoar-frostburg" theme.
 
 ### umd-lib/k8s-mdsoar Changes
 
-The changes should be made in the "umd-lib/k8s-mdsoar" repository to set up the
-community theme.
+These changes should be made in the "umd-lib/k8s-mdsoar" repository to set up
+the community theme.
 
 7) Add the theme and community handle to the `base/config/config.yml` as in Step
-   6 above:, where \"<COMMUNITY_HANDLE>" is the community handle:
+   6 above, where \"<COMMUNITY_HANDLE>" is the community handle:
 
     ```text
     themes:
@@ -102,7 +102,7 @@ When asked to create a new community theme, the following elements are required:
 
 3) The text for the footer. This will typically include:
 
-   * The insitutional logo (the provided logo image)
+   * The institutional logo (the provided logo image)
    * The name of the institutional library
    * The physcial address of the library
    * The URL of the library website
@@ -112,13 +112,13 @@ When asked to create a new community theme, the following elements are required:
 ## About Community Themes
 
 Each community theme contains the following components that can be customized
-the individual institution:
+for the individual institution:
 
 * breadcrumbs - Prepends the institution logo to the breadcrumb trail
 * footer - Adds an institution-specific footer with contact information
 
 The community themes leverage the stock DSpace theme customization functionality
-(see <https://wiki.lyrasis.org/display/DSDOC7x/User+Interface+Customization>.
+(see <https://wiki.lyrasis.org/display/DSDOC7x/User+Interface+Customization>).
 
 Each community theme derives from the global "mdsoar" theme (which in turn is
 based on the stock "dspace" theme).
