@@ -1,7 +1,10 @@
 import { testA11y } from 'cypress/support/utils';
 
 describe('Footer', () => {
-    it('should pass accessibility tests', () => {
+    // UMD Customization
+    // Skipping this test because footer is not shown in "mdsoar" default theme.
+    it.skip('should pass accessibility tests', () => {
+    // End UMD Customization
         cy.visit('/');
 
         // Footer must first be visible
