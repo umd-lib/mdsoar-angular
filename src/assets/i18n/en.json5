@@ -5301,6 +5301,15 @@
 
   "menu.header.image.logo": "MD-SOAR",
 
+  "mydspace.breadcrumbs": "My MD-SOAR",
+
+  "mydspace.title": "My MD-SOAR",
+
+  "nav.mydspace": "My MD-SOAR",
+
   "repository.title.prefix": "",
+
+  "submission.import-external.back-to-my-dspace": "Back to My MD-SOAR",
+
   // End UMD Customization
 }
