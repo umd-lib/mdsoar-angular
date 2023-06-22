@@ -104,7 +104,9 @@ describe('DsoRedirectService', () => {
       redir.subscribe();
       scheduler.schedule(() => redir);
       scheduler.flush();
-      expect(router.navigate).toHaveBeenCalledWith(['/items/' + remoteData.payload.uuid]);
+      // UMD Customization
+      expect(router.navigate).toHaveBeenCalledWith(['/items/' + remoteData.payload.uuid], Object({ replaceUrl: true }));
+      // End UMD Customization
     });
     it('should navigate to entities route with the corresponding entity type', () => {
       remoteData.payload.type = 'item';
@@ -121,7 +123,11 @@ describe('DsoRedirectService', () => {
       redir.subscribe();
       scheduler.schedule(() => redir);
       scheduler.flush();
-      expect(router.navigate).toHaveBeenCalledWith(['/entities/publication/' + remoteData.payload.uuid]);
+      // UMD Customization
+      expect(router.navigate).toHaveBeenCalledWith(
+        ['/entities/publication/' + remoteData.payload.uuid], Object({ replaceUrl: true })
+      );
+      // End UMD Customization
     });
 
     it('should navigate to collections route', () => {
@@ -130,7 +136,11 @@ describe('DsoRedirectService', () => {
       redir.subscribe();
       scheduler.schedule(() => redir);
       scheduler.flush();
-      expect(router.navigate).toHaveBeenCalledWith(['/collections/' + remoteData.payload.uuid]);
+      // UMD Customization
+      expect(router.navigate).toHaveBeenCalledWith(
+        ['/collections/' + remoteData.payload.uuid] , Object({ replaceUrl: true })
+      );
+      // End UMD Customization
     });
 
     it('should navigate to communities route', () => {
@@ -139,7 +149,11 @@ describe('DsoRedirectService', () => {
       redir.subscribe();
       scheduler.schedule(() => redir);
       scheduler.flush();
-      expect(router.navigate).toHaveBeenCalledWith(['/communities/' + remoteData.payload.uuid]);
+      // UMD Customization
+      expect(router.navigate).toHaveBeenCalledWith(
+        ['/communities/' + remoteData.payload.uuid], Object({ replaceUrl: true })
+      );
+      // End UMD Customization
     });
   });
 

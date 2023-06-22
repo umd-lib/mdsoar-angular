@@ -161,7 +161,14 @@ DSPACE_ENVIRONMENTBANNER_ENABLED=true
 ### Community Themes
 
 The DSpace communities associated with individual institutions may have a
-custom DSpace theme. See <docs/CommunityThemes.md> for more information.
+custom DSpace theme. See [docs/CommunityThemes.md](docs/CommunityThemes.md)
+for more information.
+
+### Angular Customizations
+
+Specific customizations made to the stock DSpace Angular codebase (outside of
+normal DSpace customizations) are recorded in
+[docs/MdsoarAngularCustomizations.md](docs/MdsoarAngularCustomizations.md).
 
 ### I18n Customizations
 
