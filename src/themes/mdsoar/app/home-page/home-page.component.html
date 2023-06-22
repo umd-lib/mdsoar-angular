@@ -1,0 +1,86 @@
+<ds-themed-home-news></ds-themed-home-news>
+<div class="container">
+  <ng-container *ngIf="(site$ | async) as site">
+    <ds-view-tracker [object]="site"></ds-view-tracker>
+  </ng-container>
+  <ds-search-form [inPlaceSearch]="false" [searchPlaceholder]="'home.search-form.placeholder' | translate"></ds-search-form>
+
+  <!-- Browse -->
+  <h2>Browse</h2>
+
+  <a href="/community-list">Communities and Collections </a>
+  |
+  <a href="/browse/dateissued">By Issue Date</a>
+  |
+  <a href="/browse/author">Author</a>
+  |
+  <a href="/browse/title">Titles</a>
+  |
+  <a href="/browse/subject">Subjects</a>
+  |
+  <a href="/browse/type">Type</a>
+
+  <!-- Submit -->
+  <h2>Submit</h2>
+
+  <div>
+    <a href="/submit">Submit item to MD-SOAR</a>
+  </div>
+
+  <!-- Hard-coded Institution List -->
+
+  <h2>Institutions in MD-SOAR</h2>
+
+  <p>Select a community to browse its collections.</p>
+
+  <div>
+    <a class="lead" href="/handle/11603/1">Frostburg State University</a>
+  </div>
+
+  <div>
+    <a class="lead" href="/handle/11603/2">Goucher College</a>
+  </div>
+
+  <div>
+    <a class="lead" href="/handle/11603/4380">Hood College</a>
+  </div>
+
+  <div>
+    <a class="lead" href="/handle/11603/6">Loyola Notre Dame Library</a>
+  </div>
+
+  <div>
+    <a class="lead" href="/handle/11603/8">Morgan State University</a>
+  </div>
+
+  <div>
+    <a class="lead" href="/handle/11603/9">Salisbury University</a>
+  </div>
+
+  <div>
+    <a class="lead" href="/handle/11603/4395">Stevenson University</a>
+  </div>
+
+  <div>
+    <a class="lead" href="/handle/11603/10">St. Mary's College of Maryland</a>
+  </div>
+
+  <div>
+    <a class="lead" href="/handle/11603/11">Towson University</a>
+  </div>
+
+  <div>
+    <a class="lead" href="/handle/11603/12">University of Baltimore</a>
+  </div>
+
+  <div>
+    <a class="lead" href="/handle/11603/14">University of Maryland, Baltimore County (UMBC)</a>
+  </div>
+
+  <div>
+    <a class="lead" href="/handle/11603/27642">University of Maryland, Eastern Shore</a>
+  </div>
+
+  <!-- End hard-coded Institution List -->
+  <ds-recent-item-list *ngIf="recentSubmissionspageSize>0"></ds-recent-item-list>
+</div>

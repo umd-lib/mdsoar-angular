@@ -4,9 +4,13 @@ import { NavbarComponent } from './app/navbar/navbar.component';
 import { HeaderComponent } from './app/header/header.component';
 import { RootModule } from '../../app/root.module';
 import { NavbarModule } from '../../app/navbar/navbar.module';
+import { HomePageModule } from 'src/app/home-page/home-page.module';
+import { StatisticsModule } from 'src/app/statistics/statistics.module';
 import { UmdEnvironmentBannerComponent } from './app/umd-environment-banner/umd-environment-banner.component';
 import { BreadcrumbsComponent } from './app/breadcrumbs/breadcrumbs.component';
 import { FooterComponent } from './app/footer/footer.component';
+import { HomePageComponent } from './app/home-page/home-page.component';
+import { HomeNewsComponent } from './app/home-page/home-news/home-news.component';
 
 /**
  * Add components that use a custom decorator to ENTRY_COMPONENTS as well as DECLARATIONS.
@@ -19,6 +23,8 @@ const DECLARATIONS = [
   BreadcrumbsComponent,
   FooterComponent,
   HeaderComponent,
+  HomeNewsComponent,
+  HomePageComponent,
   NavbarComponent,
   UmdEnvironmentBannerComponent,
 ];
@@ -28,6 +34,8 @@ const DECLARATIONS = [
     SharedModule,
     RootModule,
     NavbarModule,
+    HomePageModule,
+    StatisticsModule.forRoot(),
   ],
   declarations: DECLARATIONS,
   providers: [
