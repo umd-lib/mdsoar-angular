@@ -27,3 +27,8 @@ redirect in the browser history, and enable the browser "Back" button to
 return the user to the original page.
 
 Also update tests in "src/app/core/data/dso-redirect.service.spec.ts"
+
+## Disable "End User Agreement"
+
+The "End User Agreement" is not needed, and so is disabled in the
+"config/config.yml" file.

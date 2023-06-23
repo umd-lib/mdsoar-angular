@@ -5,6 +5,11 @@ rest:
   nameSpace: /server
 
 # UMD Customization
+
+# Disable End User Agreement
+info:
+  enableEndUserAgreement: false
+
 themes:
   # Note: When placing themes into this list, any theme that "extends" from
   # another theme MUST appear before that theme in the list.
@@ -70,4 +75,5 @@ themes:
 
   # DSpace Stock theme
   - name: 'dspace'
+
 # End UMD Customization
