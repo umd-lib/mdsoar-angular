@@ -6,9 +6,12 @@ rest:
 
 # UMD Customization
 
-# Disable End User Agreement
 info:
+  # Disable End User Agreement
   enableEndUserAgreement: false
+  # Disable Privacy Policy link in GDPR popup
+  enablePrivacyStatement: false
+
 
 themes:
   # Note: When placing themes into this list, any theme that "extends" from

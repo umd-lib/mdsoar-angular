@@ -32,3 +32,8 @@ Also update tests in "src/app/core/data/dso-redirect.service.spec.ts"
 
 The "End User Agreement" is not needed, and so is disabled in the
 "config/config.yml" file.
+
+## Disable "Privacy Policy" link in GDPR popup
+
+MD-SOAR does not have a privacy policy, so the "Privacy Policy" link in the
+GDPR popup is disabled in the "config/config.yml" file.
