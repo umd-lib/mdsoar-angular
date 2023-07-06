@@ -5295,6 +5295,7 @@
   "admin.system-wide-alert.title": "System-wide Alerts",
 
   // UMD Customization
+
   "browse.comcol.by.type": "Type",
 
   "browse.metadata.type": "Type",
@@ -5305,6 +5306,20 @@
 
   "home.title": "Maryland Shared Open Access Repository Home",
 
+  "item.page.citation": "Citation of Original Publication",
+
+  "item.page.department": "Department",
+
+  "item.page.program": "Program",
+
+  "item.page.rights": "Rights",
+
+  "item.page.subject": "Subjects",
+
+  "item.page.typeOfWork": "Type of Work",
+
+  "item.page.uri": "Permanent Link",
+
   "menu.header.image.logo": "MD-SOAR",
 
   "menu.section.browse_global_by_type": "By Type",
@@ -5314,6 +5329,10 @@
   "mydspace.title": "My MD-SOAR",
 
   "nav.mydspace": "My MD-SOAR",
+
+  "relationships.isAuthorOf": "Author/Creator",
+
+  "relationships.isAuthorOf.Orcid": "Author/Creator ORCID",
 
   "repository.title.prefix": "",
 
