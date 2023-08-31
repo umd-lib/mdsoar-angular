@@ -31,6 +31,12 @@
     <!-- Files -->
     <ds-themed-item-page-file-section [item]="object"></ds-themed-item-page-file-section>
 
+    <!-- Links to Files -->
+    <ds-item-page-uri-field [item]="object"
+      [fields]="['dc.description.uri']"
+      [label]="'item.page.description.uri'">
+    </ds-item-page-uri-field>
+
     <!-- Permanent Link -->
     <ds-item-page-uri-field [item]="object"
       [fields]="['dc.identifier.uri']"
