@@ -14,6 +14,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { IdlePreloadModule } from 'angular-idle-preload';
 import { JournalEntitiesModule } from '../../app/entity-groups/journal-entities/journal-entities.module';
+import { LoginPageComponent } from './app/login-page/login-page.component';
 import { MyDspaceSearchModule } from '../../app/my-dspace-page/my-dspace-search.module';
 import { MenuModule } from '../../app/shared/menu/menu.module';
 import { NavbarModule } from '../../app/navbar/navbar.module';
@@ -53,6 +54,7 @@ import { ItemSharedModule } from '../../app/item-page/item-shared.module';
 const DECLARATIONS = [
   HomePageComponent,
   BreadcrumbsComponent,
+  LoginPageComponent,
 ];
 
 @NgModule({

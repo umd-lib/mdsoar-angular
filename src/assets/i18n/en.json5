@@ -5302,6 +5302,8 @@
 
   "browse.metadata.type.breadcrumbs": "Browse by Type",
 
+  "dso-selector.set-scope.community.button": "Search all of MD-SOAR",
+
   "home.breadcrumbs": "Maryland Shared Open Access Repository Home",
 
   "home.title": "Maryland Shared Open Access Repository Home",
@@ -5322,7 +5324,11 @@
 
   "item.page.uri": "Permanent Link",
 
+  "login.form.header": "Please log in to MD-SOAR",
+
   "menu.header.image.logo": "MD-SOAR",
+
+  "menu.section.browse_global": "All of MD-SOAR",
 
   "menu.section.browse_global_by_type": "By Type",
 
@@ -5337,6 +5343,8 @@
   "relationships.isAuthorOf.Orcid": "Author/Creator ORCID",
 
   "repository.title.prefix": "",
+
+  "search.form.scope.all": "All of MD-SOAR",
 
   "submission.import-external.back-to-my-dspace": "Back to My MD-SOAR",
 
