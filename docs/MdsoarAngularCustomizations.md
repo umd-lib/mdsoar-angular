@@ -37,3 +37,8 @@ The "End User Agreement" is not needed, and so is disabled in the
 
 MD-SOAR does not have a privacy policy, so the "Privacy Policy" link in the
 GDPR popup is disabled in the "config/config.yml" file.
+
+## Explanatory Text in "Creative Commons" License Step
+
+Added explanatory text to the "Creative Commons" license step on the submission
+form in "src/app/submission/sections/cc-license/submission-section-cc-licenses.component.html".
