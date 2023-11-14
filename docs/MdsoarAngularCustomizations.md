@@ -42,3 +42,8 @@ GDPR popup is disabled in the "config/config.yml" file.
 
 Added explanatory text to the "Creative Commons" license step on the submission
 form in "src/app/submission/sections/cc-license/submission-section-cc-licenses.component.html".
+
+## Health Check Endpoint
+
+Added static HTML page (src/themes/mdsoar/assets/static-pages/health-ping.html)
+to serve as a simple health check endpoint.
