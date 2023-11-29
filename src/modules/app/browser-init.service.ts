@@ -31,7 +31,6 @@ import { isNotEmpty } from '../../app/shared/empty.util';
 import { logStartupMessage } from '../../../startup-message';
 import { MenuService } from '../../app/shared/menu/menu.service';
 import { RootDataService } from '../../app/core/data/root-data.service';
-import { firstValueFrom, Subscription } from 'rxjs';
 import { ServerCheckGuard } from '../../app/core/server-check/server-check.guard';
 
 /**
