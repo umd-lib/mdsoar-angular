@@ -110,9 +110,7 @@ describe('DsoRedirectService', () => {
       redir.subscribe();
       scheduler.schedule(() => redir);
       scheduler.flush();
-      // UMD Customization
-      expect(router.navigate).toHaveBeenCalledWith(['/items/' + remoteData.payload.uuid], Object({ replaceUrl: true }));
-      // End UMD Customization
+      expect(redirectService.redirect).toHaveBeenCalledWith(`${environment.ui.nameSpace}/items/${remoteData.payload.uuid}`, 301);
     });
     it('should navigate to entities route with the corresponding entity type', () => {
       remoteData.payload.type = 'item';
@@ -129,11 +127,7 @@ describe('DsoRedirectService', () => {
       redir.subscribe();
       scheduler.schedule(() => redir);
       scheduler.flush();
-      // UMD Customization
-      expect(router.navigate).toHaveBeenCalledWith(
-        ['/entities/publication/' + remoteData.payload.uuid], Object({ replaceUrl: true })
-      );
-      // End UMD Customization
+      expect(redirectService.redirect).toHaveBeenCalledWith(`${environment.ui.nameSpace}/entities/publication/${remoteData.payload.uuid}`, 301);
     });
 
     it('should navigate to collections route', () => {
@@ -142,11 +136,7 @@ describe('DsoRedirectService', () => {
       redir.subscribe();
       scheduler.schedule(() => redir);
       scheduler.flush();
-      // UMD Customization
-      expect(router.navigate).toHaveBeenCalledWith(
-        ['/collections/' + remoteData.payload.uuid] , Object({ replaceUrl: true })
-      );
-      // End UMD Customization
+      expect(redirectService.redirect).toHaveBeenCalledWith(`${environment.ui.nameSpace}/collections/${remoteData.payload.uuid}`, 301);
     });
 
     it('should navigate to communities route', () => {
@@ -155,11 +145,7 @@ describe('DsoRedirectService', () => {
       redir.subscribe();
       scheduler.schedule(() => redir);
       scheduler.flush();
-      // UMD Customization
-      expect(router.navigate).toHaveBeenCalledWith(
-        ['/communities/' + remoteData.payload.uuid], Object({ replaceUrl: true })
-      );
-      // End UMD Customization
+      expect(redirectService.redirect).toHaveBeenCalledWith(`${environment.ui.nameSpace}/communities/${remoteData.payload.uuid}`, 301);
     });
   });
 

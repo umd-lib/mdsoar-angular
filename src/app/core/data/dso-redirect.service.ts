@@ -99,14 +99,8 @@ export class DsoRedirectService {
           if (hasValue(dso.uuid)) {
             let newRoute = getDSORoute(dso);
             if (hasValue(newRoute)) {
-              this.router.navigate([newRoute],
-                // UMD Customization
-                // Using "replaceUrl: true", so that when processing a
-                // "/handle/"-based URL, the browser "Back" button can return
-                // the user to the original page.
-                { replaceUrl: true }
-                // End UMD Customization
-              );
+              // Use a "301 Moved Permanently" redirect for SEO purposes
+              this.hardRedirectService.redirect(this.appConfig.ui.nameSpace.replace(/\/$/, '') + newRoute, 301);
             }
           }
         }
