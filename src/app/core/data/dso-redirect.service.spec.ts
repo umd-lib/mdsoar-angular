@@ -10,6 +10,9 @@ import { RequestService } from './request.service';
 import { createSuccessfulRemoteDataObject } from '../../shared/remote-data.utils';
 import { Item } from '../shared/item.model';
 import { EMBED_SEPARATOR } from './base/base-data.service';
+import { HardRedirectService } from '../services/hard-redirect.service';
+import { environment } from '../../../environments/environment.test';
+import { AppConfig } from '../../../config/app-config.interface';
 
 describe('DsoRedirectService', () => {
   let scheduler: TestScheduler;
@@ -17,7 +20,7 @@ describe('DsoRedirectService', () => {
   let halService: HALEndpointService;
   let requestService: RequestService;
   let rdbService: RemoteDataBuildService;
-  let router;
+  let redirectService: HardRedirectService;
   let remoteData;
   const dsoUUID = '9b4f22f4-164a-49db-8817-3316b6ee5746';
   const dsoHandle = '1234567789/22';
@@ -38,9 +41,6 @@ describe('DsoRedirectService', () => {
       generateRequestId: requestUUID,
       send: true
     });
-    router = {
-      navigate: jasmine.createSpy('navigate')
-    };
 
     remoteData = createSuccessfulRemoteDataObject(Object.assign(new Item(), {
       type: 'item',
@@ -52,12 +52,18 @@ describe('DsoRedirectService', () => {
         a: remoteData
       })
     });
+
+    redirectService = jasmine.createSpyObj('redirectService', {
+      redirect: {}
+    });
+
     service = new DsoRedirectService(
+      environment as AppConfig,
       requestService,
       rdbService,
       objectCache,
       halService,
-      router,
+      redirectService
     );
   });
 
