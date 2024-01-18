@@ -13,6 +13,7 @@ import { SharedBrowseByModule } from '../../app/shared/browse-by/shared-browse-b
 import { ResultsBackButtonModule } from '../../app/shared/results-back-button/results-back-button.module';
 import { DsoPageModule } from '../../app/shared/dso-page/dso-page.module';
 import { UmdEnvironmentBannerComponent } from './app/umd-environment-banner/umd-environment-banner.component';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 /**
@@ -34,6 +35,7 @@ const DECLARATIONS = [
 
 @NgModule({
   imports: [
+    SharedModule,
     RootModule,
     NavbarModule,
     SharedBrowseByModule,
