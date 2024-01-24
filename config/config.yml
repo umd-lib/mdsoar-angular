@@ -17,54 +17,75 @@ themes:
   # Note: When placing themes into this list, any theme that "extends" from
   # another theme MUST appear before that theme in the list.
 
+  # Note: In the original MD-SOAR upgrade to DSpace 7.5, themes and
+  # communities were configured using the community handles identifiers,
+  # instead of UUIDs. The switch to UUIDs was made because of a DSpace bug
+  # (<https://github.com/DSpace/DSpace/pull/9162>) in which handle identifiers
+  # were not being properly parsed. Once MD-SOAR is updated to a DSpace version
+  # containing the fix, this configuration should probably be switched back to
+  # using the community handle identifiers, as they should be more consistent
+  # over time (and across servers).
+
   # Community Themes
   - name: 'mdsoar-frostburg'
     extends: 'mdsoar'
-    handle: '11603/1'
+    # handle: '11603/1'
+    uuid: 'e34f5843-e595-4050-9f20-3c730277abf8'
 
   - name: 'mdsoar-goucher'
     extends: 'mdsoar'
-    handle: '11603/2'
+    # handle: '11603/2'
+    uuid: '600e1739-8b79-4b3a-a63e-6e294122173e'
 
   - name: 'mdsoar-hood'
     extends: 'mdsoar'
-    handle: '11603/4380'
+    # handle: '11603/4380'
+    uuid: 'ed384ea7-4a06-4491-b7ef-f81aa1abdea4'
 
   - name: 'mdsoar-loyola-notre-dame'
     extends: 'mdsoar'
-    handle: '11603/6'
+    # handle: '11603/6'
+    uuid: '6083f1c5-cab2-4a29-94aa-48136b67f4e4'
 
   - name: 'mdsoar-morgan'
     extends: 'mdsoar'
-    handle: '11603/8'
+    # handle: '11603/8
+    uuid: '2f4b286e-89fe-43d5-acd8-9b23d479e8f6'
 
   - name: 'mdsoar-salisbury'
     extends: 'mdsoar'
-    handle: '11603/9'
+    # handle: '11603/9'
+    uuid: '639afd57-c954-493d-8edd-df0a9cf4a0fd'
 
   - name: 'mdsoar-stevenson'
     extends: 'mdsoar'
-    handle: '11603/4395'
+    # handle: '11603/4395'
+    uuid: 'f2db9a4e-700c-4245-95f0-e8279a94aba7'
 
   - name: 'mdsoar-st-marys'
     extends: 'mdsoar'
-    handle: '11603/10'
+    # handle: '11603/10'
+    uuid: '641f2917-f4e7-4d07-8b84-a6191f83b4de'
 
   - name: 'mdsoar-towson'
     extends: 'mdsoar'
-    handle: '11603/11'
+    # handle: '11603/11'
+    uuid: '113328b5-9ee7-4830-990f-7dffc00104c5'
 
   - name: 'mdsoar-ubalt'
     extends: 'mdsoar'
-    handle: '11603/12'
+    # handle: '11603/12'
+    uuid: 'd0c2feef-ef35-4aac-a6a2-4824d746cda4'
 
   - name: 'mdsoar-umbc'
     extends: 'mdsoar'
-    handle: '11603/14'
+    # handle: '11603/14'
+    uuid: 'b1076c89-bcbc-455c-b2df-ec2af2d813a2'
 
   - name: 'mdsoar-umes'
     extends: 'mdsoar'
-    handle: '11603/27642'
+    # handle: '11603/27642'
+    uuid: '6e7b8e59-1247-4bfe-8ec5-66017ea52a39'
 
   # MD-SOAR Global Theme
   - name: 'mdsoar'

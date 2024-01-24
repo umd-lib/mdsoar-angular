@@ -59,16 +59,16 @@ the "mdsoar-frostburg" theme.
              ...
     ```
 
-6) Add the theme and the community handle to the "themes" section of the
-   `config/config.yml`, where \"<COMMUNITY_THEME_HANDLE>" is the community
-   handle:
+6) Add the theme and the community UUID to the "themes" section of the
+   `config/config.yml`, where \"<COMMUNITY_UUID>" is the community
+   UUID:
 
     ```text
     themes:
       ...
       - name: 'mdsoar-example'
         extends: 'mdsoar'
-        handle: '<COMMUNITY_THEME_HANDLE>'
+        uuid: '<COMMUNITY_UUID>'
     ```
 
 ### umd-lib/k8s-mdsoar Changes
@@ -76,24 +76,24 @@ the "mdsoar-frostburg" theme.
 These changes should be made in the "umd-lib/k8s-mdsoar" repository to set up
 the community theme.
 
-7) Add the theme and community handle to the `base/config/config.yml` as in Step
-   6 above, where \"<COMMUNITY_HANDLE>" is the community handle:
+7) Add the theme and community UUID to the `base/config/config.yml` as in Step
+   6 above, where \"<COMMUNITY_UUID>" is the community UUID:
 
     ```text
     themes:
       ...
       - name: 'mdsoar-example'
         extends: 'mdsoar'
-        handle: '<COMMUNITY_HANDLE>'
+        uuid: '<COMMUNITY_UUID>'
     ```
 
 ## Community Theme Required Elements
 
 When asked to create a new community theme, the following elements are required:
 
-1) The handle of the MD-SOAR community to apply the theme to.
+1) The UUID of the MD-SOAR community to apply the theme to.
 
-    Since handles are not predictable, this implies that the MD-SOAR community
+    Since UUIDs are not predictable, this implies that the MD-SOAR community
     is created prior to the rollout of the community theme.
 
 2) A logo image for the community. This file is typically a PNG file, with
@@ -104,7 +104,7 @@ When asked to create a new community theme, the following elements are required:
 
    * The institutional logo (the provided logo image)
    * The name of the institutional library
-   * The physcial address of the library
+   * The physical address of the library
    * The URL of the library website
    * A contact email
    * A contact telephone number
