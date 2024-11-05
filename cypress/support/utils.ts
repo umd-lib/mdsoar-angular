@@ -38,6 +38,11 @@ export const testA11y = (context?: any, options?: Options) => {
             // Disable color contrast checks as they are inaccurate / result in a lot of false positives
             // See also open issues in axe-core: https://github.com/dequelabs/axe-core/labels/color%20contrast
             { id: 'color-contrast', enabled: false },
+            // UMD Customization
+            // Disable link-in-text-block check, because links can be
+            // distinguished by hovering or tabbing over them
+            { id: 'link-in-text-block', enabled: false },
+            // End UMD Customization
         ]
     });
     cy.checkA11y(context, options, terminalLog);
