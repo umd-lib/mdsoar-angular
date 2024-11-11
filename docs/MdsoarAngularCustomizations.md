@@ -45,3 +45,8 @@ form in "src/app/submission/sections/cc-license/submission-section-cc-licenses.c
 
 Added static HTML page (src/themes/mdsoar/assets/static-pages/health-ping.html)
 to serve as a simple health check endpoint.
+
+## Uncommented "/browse/*" endpoints in "robots.txt"
+
+In the "src/robots.txt.ejs" file, uncommented the "/browse/*" endpoints, to
+dissuade crawlers from those URLs.
