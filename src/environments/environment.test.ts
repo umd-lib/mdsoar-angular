@@ -321,10 +321,16 @@ export const environment: BuildConfig = {
     }
   ],
 
-  liveRegion: {
-    messageTimeOutDurationMs: 30000,
-    isVisible: false,
-  },
+  // UMD Customization
+  // Commenting out as part of "ssrBaseUrl" backport,
+  // to ensure that unit tests pass. See LIBCIR-423
+  // This customization should be removed when migrating to
+  // 7.6.3 or later
+  // liveRegion: {
+  //   messageTimeOutDurationMs: 30000,
+  //   isVisible: false,
+  // },
+  // End UMD Customization
 
   search: {
     filterPlaceholdersCount: 5
