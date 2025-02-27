@@ -332,7 +332,14 @@ export const environment: BuildConfig = {
   // },
   // End UMD Customization
 
-  search: {
-    filterPlaceholdersCount: 5
-  }
+  // UMD Customization
+  // Commenting out as part of "ssrBaseUrl" backport,
+  // to ensure that unit tests pass. See LIBCIR-423
+  // This customization should be removed when migrating to
+  // 7.6.3 or later
+  // search: {
+  //   filterPlaceholdersCount: 5
+  // }
+  // End UMD Customization
+
 };
