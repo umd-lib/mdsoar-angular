@@ -1,18 +1,28 @@
 // UMD Customization
 // Adaption of DSpace 8.0 fix from https://github.com/DSpace/dspace-angular/pull/2976
-// This customization should be removed when upgrading to DSpace 8.0 or later
+// This customization should be removed when upgrading to DSpace 9.0 or later
 import { BehaviorSubject } from 'rxjs';
 import { NativeWindowRef, NativeWindowService } from '../../../core/services/window.service';
 // End UMD Customization
-import { Component, Inject, Injector, OnInit } from '@angular/core';
-import { MenuSectionComponent } from '../../../shared/menu/menu-section/menu-section.component';
+import { NgClass } from '@angular/common';
+import {
+  Component,
+  Inject,
+  Injector,
+  OnInit,
+} from '@angular/core';
+import {
+  Router,
+  RouterLink,
+} from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
+
+import { isEmpty } from '../../../shared/empty.util';
 import { MenuService } from '../../../shared/menu/menu.service';
-import { rendersSectionForMenu } from '../../../shared/menu/menu-section.decorator';
+import { MenuID } from '../../../shared/menu/menu-id.model';
 import { LinkMenuItemModel } from '../../../shared/menu/menu-item/models/link.model';
 import { MenuSection } from '../../../shared/menu/menu-section.model';
-import { MenuID } from '../../../shared/menu/menu-id.model';
-import { isEmpty } from '../../../shared/empty.util';
-import { Router } from '@angular/router';
+import { MenuSectionComponent } from '../../../shared/menu/menu-section/menu-section.component';
 
 /**
  * Represents a non-expandable section in the admin sidebar
@@ -21,9 +31,10 @@ import { Router } from '@angular/router';
   selector: 'ds-admin-sidebar-section',
   templateUrl: './admin-sidebar-section.component.html',
   styleUrls: ['./admin-sidebar-section.component.scss'],
+  standalone: true,
+  imports: [NgClass, RouterLink, TranslateModule],
 
 })
-@rendersSectionForMenu(MenuID.ADMIN, false)
 export class AdminSidebarSectionComponent extends MenuSectionComponent implements OnInit {
 
   /**
