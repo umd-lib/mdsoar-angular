@@ -15,12 +15,6 @@ import { CSSVariableService } from '../../../shared/sass-helper/css-variable.ser
 import { CSSVariableServiceStub } from '../../../shared/testing/css-variable-service.stub';
 import { MenuServiceStub } from '../../../shared/testing/menu-service.stub';
 import { RouterStub } from '../../../shared/testing/router.stub';
-// UMD Customization
-// Adaption of DSpace 8.0 fix from https://github.com/DSpace/dspace-angular/pull/2976
-// This customization should be removed when upgrading to DSpace 9.0 or later
-import { NativeWindowService } from 'src/app/core/services/window.service';
-import { NativeWindowMockFactory } from 'src/app/shared/mocks/mock-native-window-ref';
-// End UMD Customization
 import { ExpandableAdminSidebarSectionComponent } from './expandable-admin-sidebar-section.component';
 
 describe('ExpandableAdminSidebarSectionComponent', () => {
@@ -36,11 +30,6 @@ describe('ExpandableAdminSidebarSectionComponent', () => {
         { provide: MenuService, useValue: menuService },
         { provide: CSSVariableService, useClass: CSSVariableServiceStub },
         { provide: Router, useValue: new RouterStub() },
-        // UMD Customization
-        // Adaption of DSpace 8.0 fix from https://github.com/DSpace/dspace-angular/pull/2976
-        // This customization should be removed when upgrading to DSpace 8.0 or later
-        { provide: NativeWindowService, useFactory: NativeWindowMockFactory },
-        // End UMD Customization
       ],
     }).compileComponents();
   }));

@@ -33,12 +33,6 @@ import { AuthServiceStub } from '../../shared/testing/auth-service.stub';
 import { CSSVariableServiceStub } from '../../shared/testing/css-variable-service.stub';
 import { MenuServiceStub } from '../../shared/testing/menu-service.stub';
 import { ThemeService } from '../../shared/theme-support/theme.service';
-// UMD Customization
-// Adaption of DSpace 8.0 fix from https://github.com/DSpace/dspace-angular/pull/2976
-// This customization should be removed when upgrading to DSpace 9.0 or later
-import { NativeWindowService } from 'src/app/core/services/window.service';
-import { NativeWindowMockFactory } from 'src/app/shared/mocks/mock-native-window-ref';
-// End UMD Customization
 import { AdminSidebarComponent } from './admin-sidebar.component';
 
 describe('AdminSidebarComponent', () => {
@@ -94,17 +88,6 @@ describe('AdminSidebarComponent', () => {
         { provide: ScriptDataService, useValue: scriptService },
         { provide: ActivatedRoute, useValue: routeStub },
         { provide: NgbModal, useValue: mockNgbModal },
-        // UMD Customization
-        // Adaption of DSpace 8.0 fix from https://github.com/DSpace/dspace-angular/pull/2976
-        // This customization should be removed when upgrading to DSpace 9.0 or later
-        { provide: NativeWindowService, useFactory: NativeWindowMockFactory },
-        // End UMD Customization
-        {
-          provide: NgbModal, useValue: {
-            open: () => {/*comment*/
-            }
-          }
-        }
       ],
       schemas: [NO_ERRORS_SCHEMA],
     }).overrideComponent(AdminSidebarComponent, {

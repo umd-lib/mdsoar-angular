@@ -30,11 +30,6 @@ describe('AdminSidebarSectionComponent', () => {
           { provide: 'sectionDataProvider', useValue: { model: { link: 'google.com' }, icon: iconString } },
           { provide: MenuService, useValue: menuService },
           { provide: CSSVariableService, useClass: CSSVariableServiceStub },
-          // UMD Customization
-          // Adaption of DSpace 8.0 fix from https://github.com/DSpace/dspace-angular/pull/2976
-          // This customization should be removed when upgrading to DSpace 9.0 or later
-          { provide: NativeWindowService, useFactory: NativeWindowMockFactory },
-          // End UMD Customization
         ],
       }).compileComponents();
     }));
@@ -69,11 +64,6 @@ describe('AdminSidebarSectionComponent', () => {
           { provide: 'sectionDataProvider', useValue: { model: { link: 'google.com', disabled: true }, icon: iconString } },
           { provide: MenuService, useValue: menuService },
           { provide: CSSVariableService, useClass: CSSVariableServiceStub },
-          // UMD Customization
-          // Adaption of DSpace 8.0 fix from https://github.com/DSpace/dspace-angular/pull/2976
-          // This customization should be removed when upgrading to DSpace 9.0 or later
-          { provide: NativeWindowService, useFactory: NativeWindowMockFactory },
-          // End UMD Customization
         ],
       }).compileComponents();
     }));
