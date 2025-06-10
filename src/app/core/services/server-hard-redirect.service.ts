@@ -17,8 +17,6 @@ import {
 } from '../../../express.tokens';
 import { isNotEmpty } from '../../shared/empty.util';
 import { HardRedirectService } from './hard-redirect.service';
-import { APP_CONFIG, AppConfig } from '../../../config/app-config.interface';
-import { isNotEmpty } from '../../shared/empty.util';
 
 /**
  * Service for performing hard redirects within the server app module
