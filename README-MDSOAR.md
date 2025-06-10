@@ -8,10 +8,10 @@ The original dspace-angular documentation is in the "README.md" file.
 
 ## Prerequisite
 
-- Node v16.18.0 or later
-- npm >= v5.x
-- yarn == v1.x
-- Ensure that the MD-SOAR API is up and running by following the instructions at
+* Node v18.x or v20.x
+* npm >= v10.x
+* yarn == v1.x
+* Ensure that the MD-SOAR API is up and running by following the instructions at
   <https://github.com/umd-lib/mdsoar/tree/mdsoar-main>
 
 ## About this GitHub Repository
@@ -25,28 +25,21 @@ unlike organizational GitHub accounts, individual developer GitHub account
 cannot contain two forked repositories that both share the same upstream
 repository.
 
-### Branches
-
-This repository uses the "GitHub Flow" model for branching, with the default
-"mdsoar-main" branch serving as the trunk/mainline branch for receiving
-updates from pull requests.
-
-The "main" branch is reserved for tracking changes in the upstream
-"DSpace/dspace-angular" repository, and should *not* be updated by pull
-requests.
-
 ## Development Setup
+
+This repository uses the "GitHub Flow" branching model, with "mdsoar-main" as the
+main branch for MD-SOAR development.
 
 1) Clone the Git repository and switch to the directory:
 
-    ```bash
+    ```zsh
     $ git clone -b mdsoar-main git@github.com:umd-lib/mdsoar-angular.git mdsoar-ui
     $ cd mdsoar-ui
     ```
 
 2) Create the dev config file
 
-    ```bash
+    ```zsh
     $ cat <<EOF > config/config.dev.yml
     # Angular Universal server settings
     # NOTE: these must be 'synced' with the 'dspace.ui.url' setting in your backend's local.cfg.
@@ -75,14 +68,14 @@ requests.
 
 3) Install the dependencies
 
-    ```bash
+    ```zsh
     # install the local dependencies
     $ yarn install
     ```
 
 4) Start the server in development mode
 
-    ```bash
+    ```zsh
     $ yarn run start:dev
     ```
 
@@ -96,15 +89,8 @@ requests.
 The Docker image used for running MD-SOAR in Kubernetes is created using the
 "Dockerfile.prod" file.
 
-This Docker image utilizes the "pm2" process manager
-(<https://pm2.keymetrics.io/>) to enable Node to scale to multiple CPUs, as
-suggested in
-<https://wiki.lyrasis.org/display/DSDOC7x/Performance+Tuning+DSpace>.
-
-The "pm2" process manager version is controlled by the "PM2_VERSION" environment
-variable in the "Dockerfile.prod" file.
-
-The "dspace-ui.json" file is used to configure the "pm2" process manager.
+This Docker image runs Angular using Node, relying on Kubernetes to provide
+additional replicas if horizontal scaling is needed.
 
 ## Customizations
 
@@ -140,12 +126,12 @@ section in <https://wiki.lyrasis.org/display/DSDOC7x/User+Interface+Configuratio
 
 The following environment variables can be used:
 
-- DSPACE_ENVIRONMENTBANNER_TEXT - the text to display in the banner
-- DSPACE_ENVIRONMENTBANNER_FOREGROUNDCOLOR - the foreground color for the
+* DSPACE_ENVIRONMENTBANNER_TEXT - the text to display in the banner
+* DSPACE_ENVIRONMENTBANNER_FOREGROUNDCOLOR - the foreground color for the
   banner, as a CSS color
-- DSPACE_ENVIRONMENTBANNER_BACKGROUNDCOLOR - the background color for the
+* DSPACE_ENVIRONMENTBANNER_BACKGROUNDCOLOR - the background color for the
   banner, as a CSS color
-- DSPACE_ENVIRONMENTBANNER_ENABLED - "true" (case-sensitive) enables the
+* DSPACE_ENVIRONMENTBANNER_ENABLED - "true" (case-sensitive) enables the
   banner. Anything else (including not being provided, or blank) disables the
   banner.
 
@@ -179,6 +165,26 @@ Existing DSpace-provided entries are overridden when added to the
 "UMD Customization" section, because when multiple keys occur in the file,
 the last instance of the key is used.
 
+## Customization Markings
+
+UMD customizations to stock DSpace code should be marked, if possible, with
+a starting comment "UMD Customization" and an ending comment of
+"End UMD Customization", for example, in a JavaScript file:
+
+```javascript
+// UMD Customization
+... New or modified code ...
+// End UMD Customization
+```
+
+The following customizations *do not* need to be commented:
+
+* Files that at wholly written by UMD, for which there is no corresponding
+  stock DSpace file.
+
+The main goal is to make it immediately when performing DSpace version upgrades
+whether a change in a file is due to an explicit UMD customization.
+
 ## Debugging using VS Code
 
 The built-in VS Code debugger can be used in conjunction with the Chrome web
@@ -209,3 +215,20 @@ In the launch configuration, the line:
 
 is needed to prevent Chrome from displaying a "Restore" session dialog every
 time Chrome starts. See <https://github.com/microsoft/vscode-js-debug/issues/723#issuecomment-866227122>
+
+## Running the Tests
+
+To run the TypeScript unit tests:
+
+```zsh
+$ yarn test
+```
+
+## TypeScript Linter
+
+To run the TypeScript Linter (from the "Run lint" step in
+".github/workflows/build.yml"):
+
+```zsh
+$ yarn run lint:nobuild --quiet
+```
