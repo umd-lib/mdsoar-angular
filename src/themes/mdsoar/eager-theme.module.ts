@@ -1,19 +1,13 @@
 import { NgModule } from '@angular/core';
-import { HomeNewsComponent } from './app/home-page/home-news/home-news.component';
-import { NavbarComponent } from './app/navbar/navbar.component';
-import { HeaderComponent } from './app/header/header.component';
-import { RootModule } from '../../app/root.module';
-import { NavbarModule } from '../../app/navbar/navbar.module';
-import { ItemPageModule } from '../../app/item-page/item-page.module';
-import { FooterComponent } from './app/footer/footer.component';
-import { UntypedItemComponent } from './app/item-page/simple/item-types/untyped-item/untyped-item.component';
-import { ItemSharedModule } from '../../app/item-page/item-shared.module';
 
-import { SharedBrowseByModule } from '../../app/shared/browse-by/shared-browse-by.module';
-import { ResultsBackButtonModule } from '../../app/shared/results-back-button/results-back-button.module';
-import { DsoPageModule } from '../../app/shared/dso-page/dso-page.module';
+import { RootModule } from '../../app/root.module';
+import { FooterComponent } from './app/footer/footer.component';
+import { HeaderComponent } from './app/header/header.component';
+import { HomeNewsComponent } from './app/home-page/home-news/home-news.component';
+import { HomePageComponent } from './app/home-page/home-page.component';
+import { UntypedItemComponent } from './app/item-page/simple/item-types/untyped-item/untyped-item.component';
+import { NavbarComponent } from './app/navbar/navbar.component';
 import { UmdEnvironmentBannerComponent } from './app/umd-environment-banner/umd-environment-banner.component';
-import { SharedModule } from 'src/app/shared/shared.module';
 
 
 /**
@@ -27,6 +21,7 @@ const ENTRY_COMPONENTS = [
 const DECLARATIONS = [
   ...ENTRY_COMPONENTS,
   HomeNewsComponent,
+  HomePageComponent,
   HeaderComponent,
   NavbarComponent,
   FooterComponent,
@@ -35,18 +30,11 @@ const DECLARATIONS = [
 
 @NgModule({
   imports: [
-    SharedModule,
     RootModule,
-    NavbarModule,
-    SharedBrowseByModule,
-    ResultsBackButtonModule,
-    ItemPageModule,
-    ItemSharedModule,
-    DsoPageModule,
+    ...DECLARATIONS,
   ],
-  declarations: DECLARATIONS,
   providers: [
-    ...ENTRY_COMPONENTS.map((component) => ({provide: component}))
+    ...ENTRY_COMPONENTS.map((component) => ({ provide: component })),
   ],
 })
 /**
