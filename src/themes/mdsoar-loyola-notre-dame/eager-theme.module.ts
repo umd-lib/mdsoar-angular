@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { SharedModule } from '../../app/shared/shared.module';
+
 import { BreadcrumbsComponent } from './app/breadcrumbs/breadcrumbs.component';
 import { FooterComponent } from './app/footer/footer.component';
 
@@ -16,12 +16,9 @@ const DECLARATIONS = [
 ];
 
 @NgModule({
-  imports: [
-    SharedModule,
-  ],
-  declarations: DECLARATIONS,
+  imports: [ ...DECLARATIONS ],
   providers: [
-    ...ENTRY_COMPONENTS.map((component) => ({provide: component}))
+    ...ENTRY_COMPONENTS.map((component) => ({ provide: component })),
   ],
 })
 /**

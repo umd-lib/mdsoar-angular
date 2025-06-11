@@ -28,10 +28,7 @@
 
   ::ng-deep {
     .ds-menu-item, .ds-menu-toggler-wrapper {
-      // UMD Customization
-      // Change from dspace-angular Pull 3513
-      //white-space: nowrap;
-      // End UMD Customzation
+      white-space: nowrap;
       text-decoration: none;
     }
 

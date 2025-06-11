@@ -17,7 +17,6 @@ import { EagerThemeModule as MdsoarEagerThemeModule } from './mdsoar/eager-theme
   imports: [
     DSpaceEagerThemeModule,
     // CustomEagerThemeModule,
-
     // UMD Customization
     MdsoarEagerThemeModule,
     // End UMD Customization
