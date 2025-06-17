@@ -50,3 +50,19 @@ to serve as a simple health check endpoint.
 
 In the "src/robots.txt.ejs" file, uncommented the "/browse/*" endpoints, to
 dissuade crawlers from those URLs.
+
+## Modified GitHub Workflow Actions
+
+Modified the following in ".github/workflows/build.yml" so that the GitHub jobs
+would successfully complete:
+
+* Commented out the "DOCKER_REGISTRY" environment variable and
+  "Login to ${{ env.DOCKER_REGISTRY }}" step, because it was causing Docker
+  image pulls to fail when running the
+  "Start DSpace REST Backend via Docker (for e2e tests)" step.
+
+* Modified the "Verify SSR" step for check for "Maryland" in the title instead
+  of "DSpace"
+
+* Commented out the "codecov" job, because UMD does not have an appropriate key
+  for uploading the results to codecov.io.
