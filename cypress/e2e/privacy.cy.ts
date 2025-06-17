@@ -1,7 +1,9 @@
 import { testA11y } from 'cypress/support/utils';
 
+// UMD Customization
+// Privacy Policy is suppressed in the UMD configuration
 describe('Privacy', () => {
-  it('should pass accessibility tests', () => {
+  it.skip('should pass accessibility tests', () => {
     cy.visit('/info/privacy');
 
     // Page must first be visible
@@ -11,3 +13,4 @@ describe('Privacy', () => {
     testA11y('ds-privacy');
   });
 });
+// End UMD Customization
