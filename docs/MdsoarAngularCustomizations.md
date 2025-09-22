@@ -8,6 +8,25 @@ Angular code, to customize it for MD-SOAR.
 This document is intended to cover specific changes made to Angular behavior
 that are outside of "normal" DSpace customization.
 
+## "Browse" Bar on Community Pages
+
+Modified the "Browse" bar on the community pages so that the
+"Subcommunities and Collections" tab is selected by default, instead of the
+"Search" tab.
+
+This required modifying the routing in the following files:
+
+* src/app/community-page/community-page-routes.ts
+* src/app/shared/comcol/comcol-page-browse-by/comcol-page-browse-by.component.ts
+
+by removing the "subcoms-cols" URL subpath associated with the
+"SubComColSectionComponent", and adding a "search" URL subpath for the
+"ComcolSearchSectionComponent".
+
+Note: This is a BREAKING CHANGE for users that have bookmarks pointing to a
+search results page, as the search results page is now under the "search"
+subpath.
+
 ## Disable "End User Agreement"
 
 The "End User Agreement" is not needed, and so is disabled in the

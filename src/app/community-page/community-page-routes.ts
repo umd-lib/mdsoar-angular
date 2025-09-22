@@ -73,13 +73,12 @@ export const ROUTES: Route[] = [
           menu: dsoEditMenuResolver,
         },
         children: [
+          // UMD Customization
+          // Make "Subcommunities and Collections" tab the default tab
+          // when there is no subpath for the URL
+          // "Search" tab displayed when URL has "search" subpath
           {
             path: '',
-            pathMatch: 'full',
-            component: ComcolSearchSectionComponent,
-          },
-          {
-            path: 'subcoms-cols',
             pathMatch: 'full',
             component: SubComColSectionComponent,
             resolve: {
@@ -87,6 +86,12 @@ export const ROUTES: Route[] = [
             },
             data: { breadcrumbKey: 'community.subcoms-cols' },
           },
+          {
+            path: 'search',
+            pathMatch: 'full',
+            component: ComcolSearchSectionComponent,
+          },
+          // End UMD Customization
           {
             path: 'browse/:id',
             pathMatch: 'full',
