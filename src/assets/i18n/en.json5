@@ -6846,6 +6846,12 @@
 
   "search.form.scope.all": "All of MD-SOAR",
 
+  "submission.hint.dc.contributor": "Enter the name(s) of any other contributors to the item (e.g. editors, illustrators, narrators, etc.) in the <strong>Last Name, First Name</strong> format (e.g Smith, John). To add multiple contributors, enter one name at a time and then click \"Add more\".",
+
+  "submission.hint.dc.contributor.advisor": "If applicable, enter the name(s) of the advisor(s) who oversaw the creation of this item in the <strong>Last Name, First Name</strong> format (e.g Smith, John). To add multiple advisors, enter one name at a time and then click \"Add more\".",
+
+  "submission.hint.dc.contributor.author": "Enter the name(s) of the author(s) of this item in the <strong>Last Name, First Name</strong> format (e.g Smith, John). To add multiple authors, enter one name at a time and then click \"Add more\".",
+
   "submission.import-external.back-to-my-dspace": "Back to My MD-SOAR",
 
   // End UMD Customization
