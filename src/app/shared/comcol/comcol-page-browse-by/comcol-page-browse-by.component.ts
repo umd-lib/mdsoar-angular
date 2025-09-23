@@ -103,16 +103,23 @@ export class ComcolPageBrowseByComponent implements OnDestroy, OnInit {
             });
           } else if (this.contentType === 'community') {
             comColRoute = getCommunityPageRoute(this.id);
+            // UMD Customization
+            // "Subcommunities and Colllections" tab is default tab (selected)
+            // when there is no subpath for the URL
+            // "Search" tab displayed as selected when URL has "search" subpath
+            // Note: "allOptions" order affects the order of display, so Search
+            // is first
             allOptions.push({
               id: 'search',
               label: 'collection.page.browse.search.head',
-              routerLink: comColRoute,
+              routerLink: `${comColRoute}/search`,
             });
             allOptions.push({
               id: 'comcols',
               label: 'community.all-lists.head',
-              routerLink: `${comColRoute}/subcoms-cols`,
+              routerLink: comColRoute,
             });
+            // End UMD Customization
           }
 
           allOptions.push(...browseDefListRD.payload.page.map((config: BrowseDefinition) => ({
