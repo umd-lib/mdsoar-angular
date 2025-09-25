@@ -26,6 +26,11 @@ themes:
   # over time (and across servers).
 
   # Community Themes
+  - name: 'mdsoar-bowie-state'
+    extends: 'mdsoar'
+    # handle: '11603/40165'
+    uuid: '40761e5f-122b-409b-ad4a-2d3afa1dc903'
+
   - name: 'mdsoar-frostburg'
     extends: 'mdsoar'
     # handle: '11603/1'
