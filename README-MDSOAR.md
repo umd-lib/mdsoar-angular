@@ -27,8 +27,8 @@ repository.
 
 ## Development Setup
 
-This repository uses the "GitHub Flow" branching model, with "mdsoar-main" as the
-main branch for MD-SOAR development.
+This repository uses the "GitHub Flow" branching model, with "mdsoar-main" as
+the main branch for MD-SOAR development.
 
 1) Clone the Git repository and switch to the directory:
 
@@ -122,7 +122,8 @@ environmentBanner:
 
 In DSpace, the configuration from the YAML files can be overridden using either
 environment variables, or a ".env" file (see the "Configuration Override"
-section in <https://wiki.lyrasis.org/display/DSDOC7x/User+Interface+Configuration>.
+section in
+<https://wiki.lyrasis.org/display/DSDOC7x/User+Interface+Configuration>).
 
 The following environment variables can be used:
 
@@ -182,8 +183,8 @@ The following customizations *do not* need to be commented:
 * Files that at wholly written by UMD, for which there is no corresponding
   stock DSpace file.
 
-The main goal is to make it immediately when performing DSpace version upgrades
-whether a change in a file is due to an explicit UMD customization.
+The main goal is to make it immediately obvious when performing DSpace version
+upgrades whether a change in a file is due to an explicit UMD customization.
 
 ## Debugging using VS Code
 
