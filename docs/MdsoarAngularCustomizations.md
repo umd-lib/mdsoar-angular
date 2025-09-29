@@ -8,6 +8,11 @@ Angular code, to customize it for MD-SOAR.
 This document is intended to cover specific changes made to Angular behavior
 that are outside of "normal" DSpace customization.
 
+## "Browse" Bar on Community Pages
+
+Made the "Subcommunities and Collections" tab selected by default, instead of the
+"Search" tab, in the "config/config.yml" file.
+
 ## Disable "End User Agreement"
 
 The "End User Agreement" is not needed, and so is disabled in the
