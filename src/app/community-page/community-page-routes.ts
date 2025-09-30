@@ -10,6 +10,7 @@ import { ComcolSearchSectionComponent } from '../shared/comcol/sections/comcol-s
 import { dsoEditMenuResolver } from '../shared/dso-page/dso-edit-menu.resolver';
 import { LinkMenuItemModel } from '../shared/menu/menu-item/models/link.model';
 import { MenuItemType } from '../shared/menu/menu-item-type.model';
+import { viewTrackerResolver } from '../statistics/angulartics/dspace/view-tracker.resolver';
 import { communityPageResolver } from './community-page.resolver';
 import { communityPageAdministratorGuard } from './community-page-administrator.guard';
 import {
@@ -71,14 +72,25 @@ export const ROUTES: Route[] = [
         component: ThemedCommunityPageComponent,
         resolve: {
           menu: dsoEditMenuResolver,
+          tracking: viewTrackerResolver,
         },
         children: [
-          // UMD Customization
-          // Make "Subcommunities and Collections" tab the default tab
-          // when there is no subpath for the URL
-          // "Search" tab displayed when URL has "search" subpath
           {
             path: '',
+            pathMatch: 'full',
+            component: ComcolSearchSectionComponent,
+          },
+          {
+            path: 'search',
+            pathMatch: 'full',
+            component: ComcolSearchSectionComponent,
+            resolve: {
+              breadcrumb: i18nBreadcrumbResolver,
+            },
+            data: { breadcrumbKey: 'community.search' },
+          },
+          {
+            path: 'subcoms-cols',
             pathMatch: 'full',
             component: SubComColSectionComponent,
             resolve: {
@@ -86,12 +98,6 @@ export const ROUTES: Route[] = [
             },
             data: { breadcrumbKey: 'community.subcoms-cols' },
           },
-          {
-            path: 'search',
-            pathMatch: 'full',
-            component: ComcolSearchSectionComponent,
-          },
-          // End UMD Customization
           {
             path: 'browse/:id',
             pathMatch: 'full',
