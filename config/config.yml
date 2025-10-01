@@ -5,6 +5,10 @@ rest:
   nameSpace: /server
 
 # UMD Customization
+community:
+  # Make “Subcommunities and Collections”  tab the default in the "Browse" bar
+  # on community pages.
+  defaultBrowseTab: comcols
 
 info:
   # Disable End User Agreement
