@@ -110,6 +110,20 @@ export class MenuResolverService  {
           link: `/community-list`,
         } as LinkMenuItemModel,
       },
+      // UMD Customization
+      // UMD Accessibility Link
+      {
+        id: `umd-accessibility`,
+        active: false,
+        visible: true,
+        index: 2, // Place after "Browse By"
+        model: {
+          type: MenuItemType.LINK,
+          text: `menu.section.umd-accessibility`,
+          link: `/info/mdsoar-accessibility`,
+        } as LinkMenuItemModel,
+      },
+      // End UMD Customization
     ];
     // Read the different Browse-By types from config and add them to the browse menu
     this.browseService.getBrowseDefinitions()
