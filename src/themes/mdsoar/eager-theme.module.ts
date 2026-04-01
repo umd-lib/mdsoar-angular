@@ -5,7 +5,6 @@ import { FooterComponent } from './app/footer/footer.component';
 import { HeaderComponent } from './app/header/header.component';
 import { HomeNewsComponent } from './app/home-page/home-news/home-news.component';
 import { HomePageComponent } from './app/home-page/home-page.component';
-import { UmdAccessibilityComponent } from './app/info/umd-accessibility/umd-accessibility.component';
 import { UntypedItemComponent } from './app/item-page/simple/item-types/untyped-item/untyped-item.component';
 import { NavbarComponent } from './app/navbar/navbar.component';
 import { UmdEnvironmentBannerComponent } from './app/umd-environment-banner/umd-environment-banner.component';
@@ -26,7 +25,6 @@ const DECLARATIONS = [
   HeaderComponent,
   NavbarComponent,
   FooterComponent,
-  UmdAccessibilityComponent,
   UmdEnvironmentBannerComponent,
 ];
 

@@ -34,6 +34,9 @@ import { RemoteData } from './core/data/remote-data';
 import { BrowseDefinition } from './core/shared/browse-definition.model';
 import { ConfigurationProperty } from './core/shared/configuration-property.model';
 import { getFirstCompletedRemoteData } from './core/shared/operators';
+// UMD Customization
+import { getUmdAccessibilityPath } from './info/info-routing-paths';
+// End UMD Customization
 import { ThemedCreateCollectionParentSelectorComponent } from './shared/dso-selector/modal-wrappers/create-collection-parent-selector/themed-create-collection-parent-selector.component';
 import { ThemedCreateCommunityParentSelectorComponent } from './shared/dso-selector/modal-wrappers/create-community-parent-selector/themed-create-community-parent-selector.component';
 import { ThemedCreateItemParentSelectorComponent } from './shared/dso-selector/modal-wrappers/create-item-parent-selector/themed-create-item-parent-selector.component';
@@ -120,7 +123,7 @@ export class MenuResolverService  {
         model: {
           type: MenuItemType.LINK,
           text: `menu.section.umd-accessibility`,
-          link: `/info/mdsoar-accessibility`,
+          link: getUmdAccessibilityPath(),
         } as LinkMenuItemModel,
       },
       // End UMD Customization
