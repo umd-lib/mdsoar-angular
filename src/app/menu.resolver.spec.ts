@@ -154,6 +154,14 @@ describe('menuResolver', () => {
           id: 'browse_global', visible: true,
         }));
       });
+
+      // UMD Customization
+      it('should include a UMD accessibility link', () => {
+        expect(menuService.addSection).toHaveBeenCalledWith(MenuID.PUBLIC, jasmine.objectContaining({
+          id: 'umd-accessibility', visible: true,
+        }));
+      });
+      // End UMD Customization
     });
   });
 

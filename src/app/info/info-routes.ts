@@ -2,7 +2,10 @@ import {
   Route,
   Routes,
 } from '@angular/router';
+// UMD Customization
+import { UmdAccessibilityComponent } from 'src/themes/mdsoar/app/info/umd-accessibility/umd-accessibility.component';
 
+// End UMD Customization
 import { environment } from '../../environments/environment';
 import { i18nBreadcrumbResolver } from '../core/breadcrumbs/i18n-breadcrumb.resolver';
 import { notifyInfoGuard } from '../core/coar-notify/notify-info/notify-info.guard';
@@ -17,6 +20,7 @@ import {
   END_USER_AGREEMENT_PATH,
   FEEDBACK_PATH,
   PRIVACY_PATH,
+  UMD_ACCESSIBILITY_PATH, // UMD Customization
 } from './info-routing-paths';
 import { NotifyInfoComponent } from './notify-info/notify-info.component';
 import { ThemedPrivacyComponent } from './privacy/themed-privacy.component';
@@ -36,6 +40,14 @@ export const ROUTES: Routes = [
     resolve: { breadcrumb: i18nBreadcrumbResolver },
     data: { title: 'info.accessibility-settings.title', breadcrumbKey: 'info.accessibility-settings' },
   },
+  // UMD Customization
+  {
+    path: UMD_ACCESSIBILITY_PATH,
+    component: UmdAccessibilityComponent,
+    resolve: { breadcrumb: i18nBreadcrumbResolver },
+    data: { title: 'info.umd-accessibility.title', breadcrumbKey: 'info.umd-accessibility' },
+  },
+  // End UMD Customization
   environment.info.enableEndUserAgreement ? {
     path: END_USER_AGREEMENT_PATH,
     component: ThemedEndUserAgreementComponent,

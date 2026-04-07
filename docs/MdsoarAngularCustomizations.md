@@ -51,6 +51,15 @@ form in "src/app/submission/sections/cc-license/submission-section-cc-licenses.c
 Added static HTML page (src/themes/mdsoar/assets/static-pages/health-ping.html)
 to serve as a simple health check endpoint.
 
+## MD-SOAR Accessibility Information page
+
+Added an "MD-SOAR Accessibility Information" page at the
+"/info/mdsoar-accessibility" endpoint providing detailed information about the
+accessibility of the MD-SOAR platform.
+
+In the navigation bar menu, added an "Accessibility" link to the page (placed
+after the "Browse By" dropdown)
+
 ## Uncommented "/browse/*" endpoints in "robots.txt"
 
 In the "src/robots.txt.ejs" file, uncommented the "/browse/*" endpoints, to
