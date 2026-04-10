@@ -58,7 +58,13 @@ Added an "MD-SOAR Accessibility Information" page at the
 accessibility of the MD-SOAR platform.
 
 In the navigation bar menu, added an "Accessibility" link to the page (placed
-after the "Browse By" dropdown)
+after the "Browse By" dropdown).
+
+## MD-SOAR Accessibility Footer
+
+Added an "umd-footer-accessibility" component to be a common source of
+accessibility information that is displayed in each of the institutional
+footers, with links to the MD-SOAR Accessibility information page.
 
 ## Uncommented "/browse/*" endpoints in "robots.txt"
 
