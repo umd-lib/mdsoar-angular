@@ -47,6 +47,7 @@ the main branch for MD-SOAR development.
       ssl: false
       host: localhost
       port: 4000
+      baseUrl: http://localhost:4000
       nameSpace: /
 
     # The REST API server settings
