@@ -8,9 +8,8 @@ The original dspace-angular documentation is in the "README.md" file.
 
 ## Prerequisite
 
-* Node v18.x or v20.x
+* Node >=20.0.0 <25.0.0
 * npm >= v10.x
-* yarn == v1.x
 * Ensure that the MD-SOAR API is up and running by following the instructions at
   <https://github.com/umd-lib/mdsoar/tree/mdsoar-main>
 
@@ -71,13 +70,13 @@ the main branch for MD-SOAR development.
 
     ```zsh
     # install the local dependencies
-    $ yarn install
+    $ npm install
     ```
 
 4) Start the server in development mode
 
     ```zsh
-    $ yarn run start:dev
+    $ npm run start:dev
     ```
 
     This will start the angular application in development mode which will
@@ -184,8 +183,8 @@ The following customizations *do not* need to be commented:
 * Files that at wholly written by UMD, for which there is no corresponding
   stock DSpace file.
 
-The main goal is to make it immediately obvious when performing DSpace version
-upgrades whether a change in a file is due to an explicit UMD customization.
+The main goal is to make it obvious when performing DSpace version upgrades
+whether a change in a file is due to an explicit UMD customization.
 
 ## Debugging using VS Code
 
@@ -209,21 +208,12 @@ Due to lazy module loading in Angular, a breakpoint may not be immediately
 "bound", if the relevant code has not been loaded. The breakpoint should
 bind automatically when the code is loaded.
 
-In the launch configuration, the line:
-
-```json
-"browserLaunchLocation": "ui"
-```
-
-is needed to prevent Chrome from displaying a "Restore" session dialog every
-time Chrome starts. See <https://github.com/microsoft/vscode-js-debug/issues/723#issuecomment-866227122>
-
 ## Running the Tests
 
 To run the TypeScript unit tests:
 
 ```zsh
-$ yarn test
+$ npm test
 ```
 
 ## TypeScript Linter
@@ -232,5 +222,5 @@ To run the TypeScript Linter (from the "Run lint" step in
 ".github/workflows/build.yml"):
 
 ```zsh
-$ yarn run lint:nobuild --quiet
+$ npm run lint:nobuild -- --quiet
 ```
