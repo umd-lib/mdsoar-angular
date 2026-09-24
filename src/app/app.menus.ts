@@ -31,6 +31,9 @@ import { ProcessesMenuProvider } from './shared/menu/providers/processes.menu';
 import { RegistriesMenuProvider } from './shared/menu/providers/registries.menu';
 import { StatisticsMenuProvider } from './shared/menu/providers/statistics.menu';
 import { SystemWideAlertMenuProvider } from './shared/menu/providers/system-wide-alert.menu';
+// UMD Customization
+import { UmdAccessibilityMenuProvider } from './shared/menu/providers/umd-accessibility.menu';
+// End UMD Customization
 import { WithdrawnReinstateItemMenuProvider } from './shared/menu/providers/withdrawn-reinstate-item.menu';
 import { WorkflowMenuProvider } from './shared/menu/providers/workflow.menu';
 
@@ -54,6 +57,9 @@ export const MENUS = buildMenuStructure({
   [MenuID.PUBLIC]: [
     CommunityListMenuProvider,
     BrowseMenuProvider,
+    // UMD Customization
+    UmdAccessibilityMenuProvider,
+    // End UMD Customization
     StatisticsMenuProvider,
   ],
   [MenuID.ADMIN]: [

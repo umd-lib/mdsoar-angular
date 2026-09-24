@@ -21,6 +21,9 @@ import { ProcessesMenuProvider } from './providers/processes.menu';
 import { RegistriesMenuProvider } from './providers/registries.menu';
 import { StatisticsMenuProvider } from './providers/statistics.menu';
 import { SystemWideAlertMenuProvider } from './providers/system-wide-alert.menu';
+// UMD Customization
+import { UmdAccessibilityMenuProvider } from './providers/umd-accessibility.menu';
+// End UMD Customization
 import { WorkflowMenuProvider } from './providers/workflow.menu';
 
 describe('buildMenuStructure', () => {
@@ -29,6 +32,9 @@ describe('buildMenuStructure', () => {
       [MenuID.PUBLIC]: [
         CommunityListMenuProvider,
         BrowseMenuProvider,
+        // UMD Customization
+        UmdAccessibilityMenuProvider,
+        // End UMD Customization
         StatisticsMenuProvider,
       ],
       [MenuID.ADMIN]: [
@@ -74,6 +80,9 @@ describe('buildMenuStructure', () => {
     [
       CommunityListMenuProvider,
       BrowseMenuProvider,
+      // UMD Customization
+      UmdAccessibilityMenuProvider,
+      // End UMD Customization
       StatisticsMenuProvider,
       NewMenuProvider,
       EditMenuProvider,
