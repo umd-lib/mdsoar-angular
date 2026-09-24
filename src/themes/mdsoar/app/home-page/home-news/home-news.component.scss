@@ -58,10 +58,11 @@
     }
   }
 
-  .jumbotron {
+  .home-news-content {
     background-color: transparent;
-    padding-top: 32px;
-    padding-bottom: 0px;
+    padding-top: 2rem !important;
+    padding-bottom: 0rem !important;
+    margin-bottom: 2rem !important;
   }
 
   a {
@@ -72,5 +73,3 @@
     }
   }
 }
-
-
