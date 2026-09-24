@@ -7,8 +7,9 @@ import { UmdFooterAccessibilityComponent } from '../../../mdsoar/app/umd-footer-
   selector: 'ds-themed-footer',
   styleUrls: ['../../../mdsoar/app/footer/footer.component.scss'],
   templateUrl: 'footer.component.html',
-  imports: [UmdFooterAccessibilityComponent],
-  standalone: true,
+  imports: [
+    UmdFooterAccessibilityComponent,
+  ],
 })
 export class FooterComponent extends BaseComponent {
 }

@@ -13,8 +13,10 @@ import { LoginPageComponent as BaseComponent } from '../../../../app/login-page/
   styleUrls: ['./login-page.component.scss'],
   // templateUrl: './login-page.component.html'
   templateUrl: './login-page.component.html',
-  imports: [ThemedLogInComponent, TranslateModule],
-  standalone: true,
+  imports: [
+    ThemedLogInComponent,
+    TranslateModule,
+  ],
 })
 export class LoginPageComponent extends BaseComponent {
 }

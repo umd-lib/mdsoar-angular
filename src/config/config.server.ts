@@ -1,16 +1,23 @@
+// UMD Customization
+// Require "dotenv" package, so ".env" files in the root project directory
+// will be picked up.
+import 'dotenv/config';
+
+// End UMD Customization
+import {
+  existsSync,
+  readFileSync,
+  writeFileSync,
+} from 'node:fs';
+import { join } from 'node:path';
+
 import {
   blue,
   bold,
   green,
   red,
 } from 'colors';
-import {
-  existsSync,
-  readFileSync,
-  writeFileSync,
-} from 'fs';
 import { load } from 'js-yaml';
-import { join } from 'path';
 
 import {
   isEmpty,
@@ -23,12 +30,6 @@ import { Config } from './config.interface';
 import { mergeConfig } from './config.util';
 import { DefaultAppConfig } from './default-app-config';
 import { ServerConfig } from './server-config.interface';
-
-// UMD Customization
-// Require "dotenv" package, so ".env" files in the root project directory
-// will be picked up.
-require('dotenv').config();
-// End UMD Customization
 
 const CONFIG_PATH = join(process.cwd(), 'config');
 

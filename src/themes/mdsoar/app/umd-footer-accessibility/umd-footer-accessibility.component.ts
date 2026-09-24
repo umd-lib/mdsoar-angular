@@ -5,8 +5,9 @@ import { RouterLink } from '@angular/router';
   selector: 'ds-umd-footer-accessibility',
   styleUrls: ['umd-footer-accessibility.component.scss'],
   templateUrl: 'umd-footer-accessibility.component.html',
-  imports: [RouterLink],
-  standalone: true,
+  imports: [
+    RouterLink,
+  ],
 })
 export class UmdFooterAccessibilityComponent {
 }

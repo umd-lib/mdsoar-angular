@@ -7,7 +7,6 @@ import { HomeNewsComponent as BaseComponent } from '../../../../../app/home-page
   styleUrls: ['./home-news.component.scss'],
   templateUrl: './home-news.component.html',
   imports: [],
-  standalone: true,
 })
 
 /**

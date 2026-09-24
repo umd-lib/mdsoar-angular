@@ -1,9 +1,7 @@
-import {
-  AsyncPipe,
-  NgIf,
-} from '@angular/common';
+import { AsyncPipe } from '@angular/common';
 import { Component } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
+import { HomeCoarComponent } from 'src/app/home-page/home-coar/home-coar.component';
 import { ThemedHomeNewsComponent } from 'src/app/home-page/home-news/themed-home-news.component';
 import { RecentItemListComponent } from 'src/app/home-page/recent-item-list/recent-item-list.component';
 import { ThemedSearchFormComponent } from 'src/app/shared/search-form/themed-search-form.component';
@@ -15,9 +13,12 @@ import { HomePageComponent as BaseComponent } from '../../../../app/home-page/ho
   styleUrls: ['./home-page.component.scss'],
   templateUrl: './home-page.component.html',
   imports: [
-    AsyncPipe, RecentItemListComponent, NgIf, ThemedHomeNewsComponent,
-    ThemedSearchFormComponent, TranslateModule,
+    AsyncPipe,
+    HomeCoarComponent,
+    RecentItemListComponent,
+    ThemedHomeNewsComponent,
+    ThemedSearchFormComponent,
+    TranslateModule,
   ],
-  standalone: true,
 })
 export class HomePageComponent extends BaseComponent {}
