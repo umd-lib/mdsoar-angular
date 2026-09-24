@@ -1,7 +1,4 @@
-import {
-  AsyncPipe,
-  NgIf,
-} from '@angular/common';
+import { AsyncPipe } from '@angular/common';
 import {
   Component,
   OnInit,
@@ -27,11 +24,17 @@ import { UmdEnvironmentBannerComponent } from '../umd-environment-banner/umd-env
   styleUrls: ['header.component.scss'],
   templateUrl: 'header.component.html',
   imports: [
-    AsyncPipe, ContextHelpToggleComponent, ImpersonateNavbarComponent, NgIf,
-    RouterLink, ThemedAuthNavMenuComponent, ThemedLangSwitchComponent,
-    ThemedNavbarComponent, ThemedSearchNavbarComponent, TranslateModule,
-    UmdEnvironmentBannerComponent,
-  ],
+    AsyncPipe,
+    ContextHelpToggleComponent,
+    ImpersonateNavbarComponent,
+    RouterLink,
+    ThemedAuthNavMenuComponent,
+    ThemedLangSwitchComponent,
+    ThemedNavbarComponent,
+    ThemedSearchNavbarComponent,
+    TranslateModule,
+    UmdEnvironmentBannerComponent
+],
   standalone: true,
 })
 export class HeaderComponent extends BaseComponent implements OnInit {

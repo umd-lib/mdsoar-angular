@@ -1,9 +1,4 @@
-import {
-  AsyncPipe,
-  NgFor,
-  NgIf,
-  NgTemplateOutlet,
-} from '@angular/common';
+import { AsyncPipe, NgTemplateOutlet } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
@@ -23,13 +18,11 @@ import { BreadcrumbsComponent as BaseComponent } from '../../../../app/breadcrum
   imports: [
     AsyncPipe,
     NgbTooltipModule,
-    NgFor,
-    NgIf,
     NgTemplateOutlet,
     VarDirective,
     RouterLink,
-    TranslateModule,
-  ],
+    TranslateModule
+],
   standalone: true,
 })
 export class BreadcrumbsComponent extends BaseComponent {

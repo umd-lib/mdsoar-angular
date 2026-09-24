@@ -1,7 +1,5 @@
 <ds-home-news></ds-home-news>
 <div class="container">
-  <ng-container *ngIf="(site$ | async) as site">
-  </ng-container>
   <ds-search-form [inPlaceSearch]="false" [searchPlaceholder]="'home.search-form.placeholder' | translate"></ds-search-form>
 
   <!-- Browse -->
@@ -85,5 +83,7 @@
   </div>
 
   <!-- End hard-coded Institution List -->
-  <ds-recent-item-list *ngIf="recentSubmissionspageSize>0"></ds-recent-item-list>
+  @if (recentSubmissionspageSize>0) {
+    <ds-recent-item-list></ds-recent-item-list>
+  }
 </div>
