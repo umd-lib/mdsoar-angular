@@ -1,7 +1,5 @@
 import {
   AsyncPipe,
-  NgFor,
-  NgIf,
   NgTemplateOutlet,
 } from '@angular/common';
 import { Component } from '@angular/core';
@@ -24,10 +22,9 @@ import { BreadcrumbsComponent as BaseComponent } from '../../../mdsoar/app/bread
     '../../../mdsoar/app/breadcrumbs/breadcrumbs.component.scss',
   ],
   imports: [
-    AsyncPipe, NgbTooltipModule, NgFor, NgIf, NgTemplateOutlet, RouterLink,
+    AsyncPipe, NgbTooltipModule, NgTemplateOutlet, RouterLink,
     TranslateModule, VarDirective,
   ],
-  standalone: true,
 })
 export class BreadcrumbsComponent extends BaseComponent {
   communityLogoPath = 'assets/mdsoar-ubalt/images/community_logo.png';

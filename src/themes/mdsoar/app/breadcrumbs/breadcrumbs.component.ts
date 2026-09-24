@@ -1,4 +1,7 @@
-import { AsyncPipe, NgTemplateOutlet } from '@angular/common';
+import {
+  AsyncPipe,
+  NgTemplateOutlet,
+} from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
@@ -19,11 +22,10 @@ import { BreadcrumbsComponent as BaseComponent } from '../../../../app/breadcrum
     AsyncPipe,
     NgbTooltipModule,
     NgTemplateOutlet,
-    VarDirective,
     RouterLink,
-    TranslateModule
-],
-  standalone: true,
+    TranslateModule,
+    VarDirective,
+  ],
 })
 export class BreadcrumbsComponent extends BaseComponent {
   communityLogoPath: string = null;

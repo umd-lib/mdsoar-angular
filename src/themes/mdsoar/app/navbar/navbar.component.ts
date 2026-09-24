@@ -1,4 +1,8 @@
-import { AsyncPipe, NgClass, NgComponentOutlet } from '@angular/common';
+import {
+  AsyncPipe,
+  NgClass,
+  NgComponentOutlet,
+} from '@angular/common';
 import { Component } from '@angular/core';
 import { ThemedUserMenuComponent } from 'src/app/shared/auth-nav-menu/user-menu/themed-user-menu.component';
 
@@ -17,9 +21,8 @@ import { slideMobileNav } from '../../../../app/shared/animations/slide';
     AsyncPipe,
     NgClass,
     NgComponentOutlet,
-    ThemedUserMenuComponent
-],
-  standalone: true,
+    ThemedUserMenuComponent,
+  ],
 })
 export class NavbarComponent extends BaseComponent {
 }

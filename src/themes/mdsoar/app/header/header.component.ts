@@ -33,9 +33,9 @@ import { UmdEnvironmentBannerComponent } from '../umd-environment-banner/umd-env
     ThemedNavbarComponent,
     ThemedSearchNavbarComponent,
     TranslateModule,
-    UmdEnvironmentBannerComponent
-],
-  standalone: true,
+    UmdEnvironmentBannerComponent,
+  ],
+
 })
 export class HeaderComponent extends BaseComponent implements OnInit {
   public isNavBarCollapsed$: Observable<boolean>;

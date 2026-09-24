@@ -16,8 +16,7 @@ import { HomePageComponent as BaseComponent } from '../../../../app/home-page/ho
     RecentItemListComponent,
     ThemedHomeNewsComponent,
     ThemedSearchFormComponent,
-    TranslateModule
-],
-  standalone: true,
+    TranslateModule,
+  ],
 })
 export class HomePageComponent extends BaseComponent {}

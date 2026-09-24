@@ -6,8 +6,9 @@ import { UmdAccessibilityContentComponent } from './umd-accessibility-content/um
   selector: 'ds-umd-accessibility',
   templateUrl: './umd-accessibility.component.html',
   styleUrls: ['./umd-accessibility.component.scss'],
-  standalone: true,
-  imports: [UmdAccessibilityContentComponent],
+  imports: [
+    UmdAccessibilityContentComponent,
+  ],
 })
 /**
  * Component displaying the UMD Accessibility information
