@@ -42,13 +42,19 @@
             "sourceMaps": false,
             "outDir": null
         },
+        // UMD Customization
         {
-          "type": "chrome",
-          "request": "launch",
-          "name": "Launch Chrome against localhost",
-          "url": "http://localhost:4000",
-          "webRoot": "${workspaceFolder}",
-          "browserLaunchLocation": "ui"
+            "type": "chrome",
+            "request": "launch",
+            "name": "Launch Chrome against localhost",
+            "url": "http://localhost:4000",
+            "webRoot": "${workspaceFolder}",
+            "browserLaunchLocation": "workspace",
+            // Have Chrome open in private/incognito mode
+            "runtimeArgs": [
+                "--incognito"
+            ]
         },
+        // End UMD Customization
     ]
 }

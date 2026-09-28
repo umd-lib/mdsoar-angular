@@ -6,7 +6,6 @@ import { HeaderComponent } from './app/header/header.component';
 import { HomeNewsComponent } from './app/home-page/home-news/home-news.component';
 import { HomePageComponent } from './app/home-page/home-page.component';
 import { UntypedItemComponent } from './app/item-page/simple/item-types/untyped-item/untyped-item.component';
-import { NavbarComponent } from './app/navbar/navbar.component';
 import { UmdEnvironmentBannerComponent } from './app/umd-environment-banner/umd-environment-banner.component';
 
 
@@ -23,7 +22,6 @@ const DECLARATIONS = [
   HomeNewsComponent,
   HomePageComponent,
   HeaderComponent,
-  NavbarComponent,
   FooterComponent,
   UmdEnvironmentBannerComponent,
 ];

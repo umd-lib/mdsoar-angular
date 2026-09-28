@@ -44,7 +44,6 @@ import { listableObjectComponent } from '../../../../../../../app/shared/object-
     ThemedMetadataRepresentationListComponent, ThemedResultsBackButtonComponent,
     ThemedThumbnailComponent, TranslateModule,
   ],
-  standalone: true,
 })
 export class UntypedItemComponent extends BaseComponent {
 }
